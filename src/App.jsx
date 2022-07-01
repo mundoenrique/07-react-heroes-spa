@@ -1,7 +1,9 @@
+import AppRuoter from './routers/AppRuoter';
+
 function App() {
 	return (
 		<>
-			<h1>Heroes App</h1>
+			<AppRuoter />
 		</>
 	);
 }
