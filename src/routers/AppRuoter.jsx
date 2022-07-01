@@ -1,10 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
-import { LoginPage } from '../auth/pages';
-import { DcPage, MarvelPage } from '../heroes/pages';
+import { LoginPage } from '../auth';
+import { DcPage, MarvelPage } from '../heroes';
+import { Navbar } from '../ui';
 
 function AppRuoter() {
 	return (
 		<>
+			<Navbar />
 			<Routes>
 				<Route path="/">
 					<Route index element={<LoginPage />} />
