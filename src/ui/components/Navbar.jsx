@@ -7,12 +7,17 @@ export function Navbar() {
 
 			<div className="navbar-collapse">
 				<div className="navbar-nav">
-					<CustomLink className="nav-item nav-link" to="/marvel">
+					<CustomLink className="nav-item nav-link" to="marvel">
 						Marvel
 					</CustomLink>
-
-					<CustomLink className="nav-item nav-link" to="/dc">
+					<CustomLink className="nav-item nav-link" to="dc">
 						DC
+					</CustomLink>
+					<CustomLink className="nav-item nav-link" to="search">
+						Search
+					</CustomLink>
+					<CustomLink className="nav-item nav-link" to="hero">
+						Hero
 					</CustomLink>
 				</div>
 			</div>
