@@ -18,7 +18,7 @@ export function HeroCard(props) {
 								<h5 className="card-title">{superhero}</h5>
 								<p className="card-text"> {alter_ego} </p>
 								<div className="card-link">
-									<Link to={`hero/${id}`}>Mas...</Link>
+									<Link to={`/hero/${id}`}>Mas...</Link>
 								</div>
 							</div>
 						</div>

@@ -10,7 +10,7 @@ export function HeroesRoutes() {
 				<Route path="marvel" element={<MarvelPage />} />
 				<Route path="dc" element={<DcPage />} />
 				<Route path="search" element={<SearchPage />} />
-				<Route path="hero" element={<HeroPage />} />
+				<Route path="hero/:id" element={<HeroPage />} />
 			</Routes>
 		</>
 	);

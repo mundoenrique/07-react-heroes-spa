@@ -23,9 +23,6 @@ export function Navbar() {
 					<CustomLink className="nav-item nav-link" to="search">
 						Search
 					</CustomLink>
-					<CustomLink className="nav-item nav-link" to="hero">
-						Hero
-					</CustomLink>
 				</div>
 			</div>
 

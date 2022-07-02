@@ -1,7 +1,9 @@
+import { useMemo } from 'react';
 import { getHeroresByPublisher, HeroCard } from '../';
 
 export function HeroList({ publisher }) {
-	const heroes = getHeroresByPublisher(publisher);
+	const heroes = useMemo(() => getHeroresByPublisher(publisher), [publisher]);
+
 	return (
 		<>
 			<div className="row rows-cols-1 row-cols-md-3 g-3">
