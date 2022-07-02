@@ -1,6 +1,13 @@
+import { useNavigate } from 'react-router-dom';
 import { CustomLink } from '../../auth';
 
 export function Navbar() {
+	const navigate = useNavigate();
+
+	const onLogout = () => {
+		navigate('/', { replace: true });
+	};
+
 	return (
 		<nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
 			<span className="navbar-brand">Asociaciones</span>
@@ -25,7 +32,9 @@ export function Navbar() {
 			<div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
 				<ul className="navbar-nav ml-auto">
 					<span className="nav-item nav-link text-info">Enrique</span>
-					<button className="nav-item nav-link btn">Salir</button>
+					<button className="nav-item nav-link btn" onClick={onLogout}>
+						Salir
+					</button>
 				</ul>
 			</div>
 		</nav>
