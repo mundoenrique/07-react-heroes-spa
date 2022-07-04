@@ -8,7 +8,7 @@ export function Navbar() {
 
 	const onLogout = () => {
 		logOut();
-		navigate('/');
+		navigate('/', { replace: true });
 	};
 
 	return (
