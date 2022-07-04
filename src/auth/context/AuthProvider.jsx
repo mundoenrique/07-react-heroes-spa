@@ -1,12 +1,27 @@
 import { useReducer } from 'react';
-import { authReducer, AuthContext } from '../';
+import { authReducer, AuthContext, types } from '../';
 
 const initialState = {
 	logged: false,
 };
 
 export function AuthProvider({ children }) {
-	const [state, dispatch] = useReducer(authReducer, initialState);
+	const [authState, dispatch] = useReducer(authReducer, initialState);
 
-	return <AuthContext.Provider value={{}}>{children}</AuthContext.Provider>;
+	const login = (name = '') => {
+		const action = {
+			type: types.login,
+			payload: {
+				id: 'abc',
+				name,
+			},
+		};
+		dispatch(action);
+	};
+
+	return (
+		<AuthContext.Provider value={{ ...authState, login }}>
+			{children}
+		</AuthContext.Provider>
+	);
 }

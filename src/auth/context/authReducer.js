@@ -8,7 +8,7 @@ export function authReducer(state, action) {
 			return {
 				...state,
 				logged: true,
-				name: payload.name,
+				user: payload,
 			};
 		case types.logout:
 			return {
