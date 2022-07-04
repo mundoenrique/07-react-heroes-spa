@@ -1,6 +1,7 @@
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 
-export function HeroCard(props) {
+export const HeroCard = memo(function (props) {
 	const { id, superhero, publisher, alter_ego, first_appearance, characters } =
 		props;
 
@@ -27,4 +28,4 @@ export function HeroCard(props) {
 			</div>
 		</>
 	);
-}
+});
