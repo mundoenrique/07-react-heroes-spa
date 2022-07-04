@@ -18,8 +18,16 @@ export function AuthProvider({ children }) {
 		});
 	};
 
+	const logOut = () => {
+		localStorage.removeItem('user');
+
+		dispatch({
+			type: types.logout,
+		});
+	};
+
 	return (
-		<AuthContext.Provider value={{ ...authState, login }}>
+		<AuthContext.Provider value={{ ...authState, login, logOut }}>
 			{children}
 		</AuthContext.Provider>
 	);
