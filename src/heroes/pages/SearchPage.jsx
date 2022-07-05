@@ -27,7 +27,7 @@ export function SearchPage() {
 				<div className="col-5">
 					<h4>Searching</h4>
 					<hr />
-					<form onSubmit={onSearchHero}>
+					<form onSubmit={onSearchHero} aria-label="form">
 						<input
 							type="text"
 							placeholder="Search a hero"
@@ -46,12 +46,15 @@ export function SearchPage() {
 					<h4>Results</h4>
 					<hr />
 					{showSearch && (
-						<div className="alert alert-primary animate__animated animate__fadeIn">
+						<div
+							className="alert alert-primary animate__animated animate__fadeIn"
+							aria-label="search-hero"
+						>
 							Search a hero
 						</div>
 					)}
 					{showError && (
-						<div className="alert alert-danger">
+						<div className="alert alert-danger" aria-label="no-hero">
 							No hero with <b>{q}</b>
 						</div>
 					)}
